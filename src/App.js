@@ -1,21 +1,24 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import Lifecycle from "./Lifecycle";
 
-class App extends Component {
-  render() {
+function App(){
     return (
       <div className="App">
         <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
+          <h2>Lifecycle methods through properties</h2>
         </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <Lifecycle
+          willMount={() => console.log("willMount")}
+          didMount={() => console.log("didMount")}
+          willUpdate={() => console.log("willUpdate")}
+          didUpdate={() => console.log("didUpdate")}
+          willUnmount={() => console.log("willUnmount")}
+        >
+          Lifecycle Child component
+        </Lifecycle>
       </div>
     );
-  }
 }
 
 export default App;
