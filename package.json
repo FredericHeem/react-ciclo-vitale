@@ -1,16 +1,48 @@
 {
   "name": "react-ciclo-vitale",
   "version": "0.2.0",
-  "main": "src/Lifecycle.js",
+  "main": "lib/Lifecycle.js",
   "dependencies": {
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-scripts": "1.0.10"
   },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "cross-env": "^5.0.0",
+    "gh-pages": "^1.0.0",
+    "react-scripts": "1.0.0",
+    "webpack": "^2.5.1",
+    "webpack-bundle-analyzer": "^2.8.2",
+    "webpack-dev-server": "^2.4.5"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "build:lib": "webpack --progress --colors",
+    "build:min": "cross-env LMD_ENV=production webpack -p --progress --colors",
+    "build:babel": "babel src --out-dir lib",
+    "prepublish": "npm run build:babel",
+    "version": "npm test",
+    "postversion": "git push && git push --tags && npm publish && npm run deploy",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "babel": {
+    "presets": [
+      [
+        "es2015",
+        {
+          "modules": false
+        }
+      ],
+      "react",
+      "stage-0"
+    ]
   }
 }
