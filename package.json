@@ -2,6 +2,7 @@
   "name": "react-ciclo-vitale",
   "version": "0.3.0",
   "main": "lib/Lifecycle.js",
+  "files": ["README.md", "lib/Lifecycle.js"], 
   "dependencies": {
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
