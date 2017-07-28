@@ -2,7 +2,6 @@
   "name": "react-ciclo-vitale",
   "version": "0.2.0",
   "main": "src/Lifecycle.js",
-  "private": true,
   "dependencies": {
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
