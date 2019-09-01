@@ -7,9 +7,9 @@
     "lib/Lifecycle.js"
   ],
   "dependencies": {
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1",
-    "react-scripts": "1.0.10"
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-scripts": "3.1.1"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
@@ -17,11 +17,11 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
     "cross-env": "^5.0.0",
-    "gh-pages": "^1.0.0",
-    "react-scripts": "1.0.0",
-    "webpack": "^2.5.1",
-    "webpack-bundle-analyzer": "^2.8.2",
-    "webpack-dev-server": "^2.4.5"
+    "gh-pages": "^2.1.1",
+    "react-scripts": "3.1.1",
+    "webpack": "^4.39.3",
+    "webpack-bundle-analyzer": "^3.4.1",
+    "webpack-dev-server": "^3.8.0"
   },
   "scripts": {
     "start": "react-scripts start",
